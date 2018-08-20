@@ -9,7 +9,7 @@ import (
 
 func main() {
 	client, err := hdfs.New("localhost:8020")
-	err := client.Walk("/tmp", func(path string, info os.FileInfo, err error) error {
+	err = client.Walk("/tmp", func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
@@ -18,6 +18,7 @@ func main() {
 		}
 		return nil
 	})
+	pp.Println(err)
 	//
 	// file, _ := client.Open("/mobydick.txt")
 	//
