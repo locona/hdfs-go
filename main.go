@@ -9,7 +9,9 @@ import (
 
 func main() {
 	client, err := hdfs.New("localhost:8020")
-	err = client.Walk("/tmp", func(path string, info os.FileInfo, err error) error {
+	// b, err := client.ReadFile("/tmp/sample_1_1_1/0_0_0.csv")
+	// pp.Println(string(b), err)
+	err = client.Walk("/tmp/samplesamplesamplesamplesample", func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
